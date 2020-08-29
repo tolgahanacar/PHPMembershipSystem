@@ -1,7 +1,6 @@
 # PHPMembershipSystem
 PHP Membership System 
 
-<h2> PHP Membership System </h2>
 <h3> Setup </h3>
 1- Import gittolgahan.sql <br>
 2- Settings/config.php edit->dbname='Your Database name'; <br>
