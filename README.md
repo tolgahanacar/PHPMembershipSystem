@@ -7,9 +7,9 @@ PHP Membership System
 2- Settings/config.php edit->dbname='Your Database name';
 
 <b>Specifications </b>
-1- Username or E-mail login feature
-2- Password and password verification feature when registering
-3- Session control
+1- Username or E-mail login feature <br>
+2- Password and password verification feature when registering <br>
+3- Session control <br>
 
 
 <b>All necessary information will be added! </b>
