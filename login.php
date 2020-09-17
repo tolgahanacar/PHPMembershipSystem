@@ -7,9 +7,8 @@ require_once 'Settings/config.php';
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
+    <meta name="description" content="PHPMembershipSystem">
+    <meta name="author" content="Tolgahan ACAR">
     <title>Login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
@@ -95,13 +94,7 @@ if(isset($_POST['log'])){
       </div>";
       die();
     }
-    
-    
-    
 }
-/*$uore = strip_tags(trim($_POST['uore']));
-    $pass = strip_tags(trim(md5($_POST['pass'])));*/
-//
 ?>
 </form>
 
