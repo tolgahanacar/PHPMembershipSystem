@@ -63,13 +63,13 @@ require_once 'Settings/config.php';
   <button class="btn btn-lg btn-primary btn-block" type="submit" name="log">Login</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
   <?php
-if(isset($_POST['log'])){
-    if(empty($uore=strip_tags(trim($_POST['uore'])))){
-        echo "<div class='alert alert-info' role='alert'>
-        Username cannot be empty!
-      </div>";
-        die();
-    }
+    if(isset($_POST['log'])){
+        if(empty($uore=strip_tags(trim($_POST['uore'])))){
+            echo "<div class='alert alert-info' role='alert'>
+            Username cannot be empty!
+          </div>";
+            die();
+        }
 
     if(empty($pass=strip_tags(trim($_POST['pass'])))){
         $error = true;
@@ -80,19 +80,17 @@ if(isset($_POST['log'])){
     }
 
     $pass2 = md5($pass);
-    $Query = $VeriTabaniBaglantisi->query("SELECT * FROM users WHERE UEMail ='$uore' AND UPassword = '$pass2'")->fetch();
+    $Query2 = $VeriTabaniBaglantisi->prepare("SELECT * FROM users WHERE UEMail ='$uore' AND UPassword = '$pass2'");
+    $Query2->execute();
+    $Query = $Query2->fetch();
     if($Query){
         $_SESSION['USER'] = $uore;
-        echo "<div class='alert alert-success' role='alert'>
-        Login Successful
-      </div>";
+        echo "<div class='alert alert-success' role='alert'>Login Successful </div>";
         header("refresh:1 url=index.php");
         die();
     }else{
-        echo "<div class='alert alert-danger' role='alert'>
-        Username or password is incorrect
-      </div>";
-      die();
+        echo "<div class='alert alert-danger' role='alert'> Username or password is incorrect </div>";
+        die();
     }
 }
 ?>
