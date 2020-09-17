@@ -13,9 +13,9 @@ SessionControl();
     <title>Home Page</title>
 </head>
 <body>
-    <?php $user = $_SESSION['Username']; ?>
+    <?php $user = $_SESSION['USER']; ?>
     <?php echo "Welcome"." "."<b>".$user."</b>";?>
-    <?php $Query = $VeriTabaniBaglantisi->prepare("SELECT * FROM users WHERE Username = '$user'"); 
+    <?php $Query = $VeriTabaniBaglantisi->prepare("SELECT * FROM users WHERE UEMail = '$user'"); 
     $Query->execute();
     $Data=$Query->fetchAll(PDO::FETCH_OBJ);
     ?>

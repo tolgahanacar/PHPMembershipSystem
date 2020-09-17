@@ -22,9 +22,9 @@
     <label for="">E-Mail</label>
     <input type="email" name="email" id="" required><br>
     <label for="">Password</label>
-    <input type="password" name="password" id="" required><br>
+    <input type="password" name="password" required><br>
     <label for="">Repeat Password</label>
-    <input type="password" name="repeatpassword" id="" required><br>
+    <input type="password" name="repeatpassword" required><br>
     <input type="submit" value="Register" name="register">
     <a href="login.php"><input type="button" value="Login"></a>
     </div>
